@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def checkPermutation(string1, string2):
     if len(string1) != len(string2):
         return False
@@ -8,7 +9,7 @@ def checkPermutation(string1, string2):
     if string1Count == string2Count:
         return True
     return False
-    
+
     # Other way:
     # string1Hash = Counter()
     # for char in string1:
@@ -18,7 +19,8 @@ def checkPermutation(string1, string2):
     #         return False
     #     string1Hash[char] -= 1
     # return True
-    
+
+
 # Other things to note:
 # 1. Does either string contain blank spaces
 # 2. Case sensitive inputs?
