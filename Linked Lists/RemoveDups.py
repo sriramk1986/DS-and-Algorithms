@@ -115,6 +115,23 @@ class DoublyLinkedList:
                 valueHash[node.value] = True
             node = nextNode
 
+    # Without hash table
+    def removeDuplicates2(self):
+        if self.head is None:
+            return
+
+        current = self.head
+
+        while current is not None:
+            next = current.next
+            while next is not None:
+                nextNode = next.next
+                if next.value == current.value:
+                    self.removeNode(next)
+                    next = nextNode
+                next = nextNode
+            current = current.next
+
     def print_list(self):
         node = self.head
         while node is not None:
@@ -131,6 +148,6 @@ llist.append(2)
 llist.append(2)
 llist.append(4)
 
-llist.removeDuplicates()
+llist.removeDuplicates2()
 llist.print_list()
 
